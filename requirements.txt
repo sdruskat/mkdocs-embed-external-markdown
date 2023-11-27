@@ -1,2 +1,4 @@
 Jinja2==3.1.2
 requests==2.31.0
+pytest-mock[test]==3.12.0
+mkdocs[test]==1.5.3

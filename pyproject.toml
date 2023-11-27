@@ -32,6 +32,10 @@ dependencies = [
 Source = 'https://github.com/fire1ce/pypi-test'
 
 [project.optional-dependencies]
+test = [
+  "pytest-mock",
+  "mkdocs"
+]
 
 [project.scripts]
 
