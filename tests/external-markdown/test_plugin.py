@@ -6,24 +6,13 @@ from external_markdown.plugin import EmbedExternalMarkdown
 
 @fixture
 def markdown():
-    return """# Title
-
-This is test Markdown.
-
-## Links
-
-This is an [external link](https://github.com). It should remain intact.
-
-This is an [external link with anchor](https://ansible-docs.readthedocs.io/zh/stable-2.0/rst/playbooks_variables.html#using-variables-about-jinja2). 
-This is from this project's README and should remain intact.
-
-This is an [internal link](#links) to an anchor (here: the "Links" subsection) on the same page. It should remain intact.
-
-This is an [semi-internal anchored link](testpage.md#test-subsection) to an anchor (here: the "Test subsection" subsection) on another page in the same directory. It should remain intact.
-
-This is an [semi-internal link](testpage.md) to another page in the same directory. It should remain intact.
-
-    """
+    return """# Test links
+## Links that should remain intact
+- [external link](https://github.com)
+- [external link with anchor](https://ansible-docs.readthedocs.io/zh/stable-2.0/rst/playbooks_variables.html#using-variables-about-jinja2)
+- [internal link](#links)
+- [site-internal anchored link](testpage.md#test-subsection)
+- [site-internal link](testpage.md)"""
 
 
 class TestEmbedExternalMarkdown:
